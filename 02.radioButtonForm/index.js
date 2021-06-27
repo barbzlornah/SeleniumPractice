@@ -9,7 +9,8 @@ async function radioButtonForm() {
             await driver.get("https://rori4.github.io/selenium-practice/#/pages/practice/radio-button-form");
             await driver.findElement(By.css("#title")).sendKeys("Title that has atleast twenty characters");
             await driver.findElement(By.css("#description")).sendKeys("Description must be atleast twenty characters");
-            await (await driver.findElement(By.css("div:nth-child(1) > label > span.custom-control-indicator"))).click();
+            await driver.findElement(By.css("div:nth-child(1) > label > span.custom-control-indicator")).click();
+            await driver.findElement(By.css("#submit")).click();
       } catch (error) {
             console.log(error);
             
